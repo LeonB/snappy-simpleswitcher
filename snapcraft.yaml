@@ -1,0 +1,17 @@
+name: simpleswitcher
+version: cbc89a7
+summary: A popup window switcher roughly based on superswitcher
+description: A popup window switcher roughly based on superswitcher, requiring only xlib and xft
+confinement: devmode
+
+apps:
+  simpleswitcher:
+    command: simpleswitcher
+    # plugs: [home, x11, unity7]
+
+parts:
+  xcape:
+    plugin: make
+    source: https://github.com/seanpringle/simpleswitcher/archive/cbc89a7.zip
+    source-subdir: simpleswitcher-cbc89a71a61fd2d164c3fdc3ef4d3fa809c1741a
+    build-packages: [libx11-dev, libxft-dev, libfreetype6-dev, libxres-dev, libxinerama-dev]
